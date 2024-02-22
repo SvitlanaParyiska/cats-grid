@@ -38,6 +38,30 @@
   padding: 0 16px;
 }
 
+.section-longread {
+  display: grid;
+  gap: 96px;
+}
+
+@media (min-width: 1440px) {
+  .section-longread {
+    grid-template-areas:
+      "b b s"
+      "b b s"
+      "b b v"
+      "b b .";
+    gap: 60px 24px;
+  }
+  .blog {
+    grid-area: b;
+  }
+  .socials {
+    grid-area: s;
+  }
+  .video {
+    grid-area: v;
+  }
+}
 .posts {
   margin-bottom: 80px;
   display: grid;
@@ -181,4 +205,11 @@
 .footer {
   padding: 16px;
   background-color: var(--blue-light);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  gap: 8px;
 }
